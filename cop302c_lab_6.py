@@ -24,19 +24,19 @@ def main():
 
 		# based on choice decodes, encodes, or exits program
 		if choice in ('1', '2', '3'):
-			if choice == 1:
+			if choice == '1':
 				# collects the password from the user
-				dec_pass = str(input('Please enter your password to encode: ')
+				dec_pass = str(input('Please enter your password to encode: '))
 				# stores encoded password
 				enc_pass = encode(dec_pass)
 				print(f'Your password has been encoded and stored!')
-			elif choice == 2:
+			elif choice == '2':
 				# only if password has been encoded and stored
 				if enc_pass != 0:
-					print(f'The encoded password is {enc_pass}, and the original password is {dec_pass.')
+					print(f'The encoded password is {enc_pass}, and the original password is {dec_pass}.')
 				else:
 					print('No password has been encoded yet.')
-			elif choice == 3:
+			elif choice == '3':
 				break
 		elif choice:
 			print('Error: Invalid selection!')
