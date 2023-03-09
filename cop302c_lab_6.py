@@ -1,3 +1,5 @@
+# Sophya Wodchis
+# COP3502C: Lab 6 (Encode)
 # encodes the password
 def encode(password):
 	enc_pass = ""
@@ -33,7 +35,7 @@ def main():
 			elif choice == '2':
 				# only if password has been encoded and stored
 				if enc_pass != 0:
-					print(f'The encoded password is {enc_pass}, and the original password is {dec_pass}.')
+					print(f'The encoded password is {enc_pass}, and the original password is .') # add decoding function
 				else:
 					print('No password has been encoded yet.')
 			elif choice == '3':
