@@ -7,8 +7,28 @@ def encode(password):
 	# return statement
 	return enc_pass
 
+# decodes the password
+def decode(password):
+    decoded_password=""
+
+    for i in range(0,len(password)):
+        x=int(password[i:i+1])
+		# decodes by subtracting three from each integer
+		#if integer >= 2, loops the value
+        if x <= 2:
+            x = 7+x
+        else:
+            x -= 3
+
+        decoded_password = decoded_password + str(x)
+    
+    return decoded_password
+
 # main function
 def main():
+
+	enc_pass = 0
+
 	while True:
 		# main section of the program to display options for the user
 		print(f'Menu')
@@ -17,7 +37,6 @@ def main():
 		print(f'2. Decode')
 		print(f'3. Exit')
 
-		enc_pass = 0
 
 		# collects user's selection
 		choice = input('Please enter an option: ')
@@ -33,6 +52,7 @@ def main():
 			elif choice == '2':
 				# only if password has been encoded and stored
 				if enc_pass != 0:
+					dec_pass=decode(enc_pass)
 					print(f'The encoded password is {enc_pass}, and the original password is {dec_pass}.')
 				else:
 					print('No password has been encoded yet.')
