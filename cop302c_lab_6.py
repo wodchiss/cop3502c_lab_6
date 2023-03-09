@@ -1,3 +1,5 @@
+# Sophya Wodchis
+# COP3502C: Lab 6 (Encode)
 # encodes the password
 def encode(password):
 	enc_pass = ""
